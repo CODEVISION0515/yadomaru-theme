@@ -12,11 +12,13 @@
 function yadomaru_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	// 横ロゴ（同梱 assets/images/yadomaru-logo.png は 200×80）。カスタムロゴで差し替え可。
 	add_theme_support( 'custom-logo', array(
-		'height'      => 40,
-		'width'       => 160,
-		'flex-height' => true,
-		'flex-width'  => true,
+		'height'               => 80,
+		'width'                => 200,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'unlink-homepage-logo' => false,
 	) );
 	add_theme_support( 'html5', array(
 		'search-form',
@@ -34,12 +36,49 @@ function yadomaru_setup() {
 add_action( 'after_setup_theme', 'yadomaru_setup' );
 
 /**
+ * テーマ同梱のデフォルトロゴ URL（横 200×80px PNG）
+ *
+ * @return string
+ */
+function yadomaru_default_logo_url() {
+	return get_template_directory_uri() . '/assets/images/yadomaru-logo.png';
+}
+
+/**
+ * サイトロゴを出力（外観のカスタムロゴを優先、未設定時は同梱 PNG）
+ *
+ * @param string $context 'header' | 'footer'
+ */
+function yadomaru_the_site_logo( $context = 'header' ) {
+	if ( has_custom_logo() ) {
+		the_custom_logo();
+		return;
+	}
+
+	$path = get_template_directory() . '/assets/images/yadomaru-logo.png';
+	if ( ! is_readable( $path ) ) {
+		$fb_class = ( 'footer' === $context ) ? 'font-display text-xl text-white' : 'font-display text-lg text-navy';
+		echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="' . esc_attr( $fb_class ) . '" rel="home">' . esc_html( get_bloginfo( 'name', 'display' ) ) . '</a>';
+		return;
+	}
+
+	$loading = ( 'header' === $context ) ? 'eager' : 'lazy';
+	printf(
+		'<a href="%1$s" class="custom-logo-link" rel="home"><img src="%2$s" class="custom-logo" alt="%3$s" width="200" height="80" decoding="async" loading="%4$s" /></a>',
+		esc_url( home_url( '/' ) ),
+		esc_url( yadomaru_default_logo_url() ),
+		esc_attr( get_bloginfo( 'name', 'display' ) ),
+		esc_attr( $loading )
+	);
+}
+
+/**
  * スクリプト・スタイル読み込み
  */
 function yadomaru_scripts() {
 	wp_enqueue_style( 'remixicon', 'https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css', array(), '4.5.0' );
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap', array(), null );
-	wp_enqueue_style( 'yadomaru-style', get_stylesheet_uri(), array(), '1.0.0' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap', array(), null );
+	wp_enqueue_style( 'yadomaru-style', get_stylesheet_uri(), array(), '2.0.2' );
 }
 add_action( 'wp_enqueue_scripts', 'yadomaru_scripts' );
 

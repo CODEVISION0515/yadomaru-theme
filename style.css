@@ -11,192 +11,175 @@ Text Domain: yadomaru
 */
 
 /* ═══════════════════════════════════════════
-   宿まる Design System v1 — Navy + Warm Hospitality
+   宿まる Design System — 「灯と海」v3（一から再設計）
    ═══════════════════════════════════════════ */
 
 :root {
-  /* Navy base */
-  --navy: #1e3a5f;
-  --navy-deep: #152a45;
-  --navy-light: #2a4f7a;
-  --navy-muted: #3d6490;
+  /* ブランド（Tailwind navy / amber と同期） */
+  --navy: #0f2347;
+  --navy-deep: #081428;
+  --navy-light: #1a3d6b;
+  --navy-muted: #5a6f8f;
 
-  /* Warm accent */
-  --amber: #d4915e;
-  --amber-soft: #e8b48a;
-  --amber-deep: #b87543;
-  --amber-glow: rgba(212, 145, 94, 0.22);
-  --amber-subtle: rgba(212, 145, 94, 0.1);
+  --amber: #c75b3a;
+  --amber-soft: #e8b5a3;
+  --amber-deep: #9e4428;
+  --amber-glow: rgba(199, 91, 58, 0.2);
+  --amber-subtle: rgba(199, 91, 58, 0.09);
 
-  /* Neutrals */
-  --cream: #fdfaf7;
-  --cream-deep: #f5efe8;
-  --warm-white: #fffaf5;
-  --ink: #2c2825;
-  --ink-muted: #5a5550;
-  --ink-soft: #7d7872;
+  --paper: #f7f5f0;
+  --paper-warm: #edeae3;
+  --ink: #14120f;
+  --ink-muted: #5c5854;
 
-  --gray-950: #2c2825;
-  --gray-900: #3d3835;
-  --gray-800: #524c48;
-  --gray-700: #6b6560;
-  --gray-600: #8a847d;
-  --gray-500: #a39d96;
-  --gray-400: #c4beb6;
-  --gray-300: #ddd8d2;
-  --gray-200: #ebe6e0;
-  --gray-100: #f3eee8;
-  --gray-50: #faf6f1;
-  --white: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(8, 20, 40, 0.06);
+  --shadow-md: 0 12px 32px rgba(8, 20, 40, 0.08);
+  --shadow-lg: 0 24px 48px rgba(8, 20, 40, 0.1);
 
-  /* Sage secondary */
-  --sage: #6b9e8f;
-  --sage-soft: rgba(107, 158, 143, 0.12);
-
-  /* Shadows */
-  --shadow-xs: 0 1px 2px rgba(30, 58, 95, 0.05);
-  --shadow-sm: 0 2px 8px rgba(30, 58, 95, 0.06);
-  --shadow-md: 0 8px 24px rgba(30, 58, 95, 0.08);
-  --shadow-lg: 0 16px 40px rgba(30, 58, 95, 0.1);
-  --shadow-xl: 0 24px 48px rgba(30, 58, 95, 0.12);
-  --shadow-glow: 0 8px 32px var(--amber-glow);
-
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --radius: 1.125rem;
-  --radius-lg: 1.5rem;
-  --radius-xl: 2rem;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --radius: 0.25rem;
 }
 
-/* ── Hero ── */
-.yd-hero {
-  position: relative;
-  background:
-    radial-gradient(ellipse 90% 70% at 10% 20%, rgba(30, 58, 95, 0.08) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 60% at 90% 30%, rgba(212, 145, 94, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(245, 239, 232, 0.5) 0%, transparent 45%),
-    linear-gradient(168deg, #f8f5f0 0%, #fdfaf7 38%, #f0ede8 100%);
+/* ── タイポ ── */
+.font-display,
+h1, h2 {
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
-/* Section wave divider */
-.yd-wave {
-  display: block;
-  width: 100%;
-  height: 3rem;
-}
-
-/* Dot texture for sections */
-.yd-dots {
-  background-color: var(--cream-deep);
-  background-image: radial-gradient(rgba(30, 58, 95, 0.07) 1px, transparent 1px);
-  background-size: 18px 18px;
-}
-
-/* CTA band */
-.yd-cta-band {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(145deg, var(--navy) 0%, var(--navy-deep) 50%, #0f2035 100%);
-}
-
-.yd-cta-band::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 145, 94, 0.15) 0%, transparent 55%);
-  pointer-events: none;
-}
-
-/* ── Base ── */
-h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: 'Plus Jakarta Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: -0.02em;
+h3, h4, h5, h6,
+.font-heading {
+  font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 body {
-  font-family: 'Noto Sans JP', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--gray-700);
+  font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  color: var(--ink-muted);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 0.02em;
-  word-break: auto-phrase;
-  overflow-wrap: anywhere;
-  line-break: strict;
-  background-color: var(--cream);
+  background-color: var(--paper);
+  line-height: 1.75;
+  letter-spacing: 0.03em;
 }
 
 html { scroll-behavior: smooth; }
 
 ::selection {
-  background-color: var(--amber-subtle);
+  background: var(--amber-subtle);
   color: var(--ink);
 }
 
-/* ── Header ── */
-.site-header {
-  background: transparent;
-  border-bottom: none;
-  transition: box-shadow 0.35s var(--ease);
+/* ── レイアウト ── */
+.ym-wrap {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-.site-header__bar {
-  background: rgba(253, 250, 247, 0.97);
-  border: 1px solid rgba(30, 58, 95, 0.1);
-  border-radius: 9999px;
-  box-shadow: 0 2px 16px rgba(30, 58, 95, 0.05);
+/* ── ヒーロー ── */
+.ym-hero {
+  position: relative;
+  min-height: auto;
+  padding-bottom: 4rem;
+  background:
+    radial-gradient(ellipse 120% 80% at 100% 0%, rgba(199, 91, 58, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(15, 35, 71, 0.06) 0%, transparent 55%),
+    linear-gradient(180deg, #fdfcfa 0%, var(--paper) 100%);
 }
 
-.site-header.header-scrolled .site-header__bar {
-  background: rgba(253, 250, 247, 0.95);
-  box-shadow: 0 8px 32px rgba(30, 58, 95, 0.08);
+.ym-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0v60M0 30h60' stroke='%230f2347' stroke-opacity='0.04' stroke-width='1'/%3E%3C/svg%3E");
+  opacity: 0.6;
+  pointer-events: none;
 }
 
-/* ── Buttons ── */
+.ym-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* 旧テンプレ互換 */
+.bento {
+  background: #fff;
+  border: 1px solid rgba(15, 35, 71, 0.08);
+  border-radius: 2px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.bento:hover {
+  border-color: rgba(15, 35, 71, 0.18);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(15, 35, 71, 0.12), transparent);
+}
+
+/* ── セクションラベル ── */
+.ym-kicker {
+  display: inline-block;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--navy-muted);
+  border-left: 3px solid var(--amber);
+  padding-left: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── カード（旧 bento 置換） ── */
+.ym-card {
+  background: #fff;
+  border: 1px solid rgba(15, 35, 71, 0.08);
+  border-radius: 2px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.ym-card:hover {
+  border-color: rgba(15, 35, 71, 0.18);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ── ボタン ── */
 .btn-accent {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-weight: 600;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
   cursor: pointer;
   background: var(--amber);
-  color: var(--white);
-  padding: 0.875rem 2rem;
-  font-size: 0.9375rem;
-  border-radius: 9999px;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 2px;
   border: none;
   text-decoration: none;
-  transition: background 0.2s var(--ease), box-shadow 0.2s var(--ease), transform 0.2s var(--ease);
-  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.06em;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  box-shadow: 0 2px 0 var(--amber-deep);
 }
 
 .btn-accent:hover {
   background: var(--amber-deep);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-navy {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  background: var(--navy);
-  color: var(--white);
-  padding: 0.875rem 2rem;
-  font-size: 0.9375rem;
-  border-radius: 9999px;
-  border: none;
-  text-decoration: none;
-  transition: all 0.25s var(--ease);
-  box-shadow: var(--shadow-sm);
-}
-
-.btn-navy:hover {
-  background: var(--navy-deep);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 16px var(--amber-glow);
 }
 
 .btn-ghost {
@@ -204,70 +187,93 @@ html { scroll-behavior: smooth; }
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.55);
-  color: var(--ink);
-  padding: 0.875rem 2rem;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 700;
   font-size: 0.9375rem;
-  border-radius: 9999px;
-  border: 2px solid rgba(30, 58, 95, 0.2);
+  cursor: pointer;
+  background: transparent;
+  color: var(--navy);
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  border: 2px solid var(--navy);
   text-decoration: none;
-  transition: all 0.25s var(--ease);
+  letter-spacing: 0.06em;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: var(--navy);
-  color: var(--navy);
+  background: var(--navy);
+  color: #fff;
 }
 
-.btn-outline {
+.btn-navy {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  background: transparent;
-  color: var(--ink);
+  background: var(--navy);
+  color: #fff;
   padding: 0.875rem 2rem;
   font-size: 0.9375rem;
-  border-radius: 9999px;
-  border: 2px solid var(--gray-200);
+  border-radius: 2px;
+  border: none;
   text-decoration: none;
-  transition: all 0.25s var(--ease);
+  transition: background 0.2s var(--ease), transform 0.2s;
 }
 
-.btn-outline:hover {
-  background: var(--amber-subtle);
-  color: var(--amber-deep);
-  border-color: rgba(212, 145, 94, 0.45);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+.btn-navy:hover {
+  background: var(--navy-deep);
+  transform: translateY(-1px);
 }
 
-/* ── Bento Card ── */
-.bento {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: 1.25rem;
-  transition: all 0.35s var(--ease);
-  overflow: hidden;
-  box-shadow: var(--shadow-xs);
+/* ── ヘッダー ── */
+.site-header {
+  transition: background 0.3s var(--ease), border-color 0.3s;
 }
 
-.bento:hover {
-  border-color: rgba(30, 58, 95, 0.18);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+.site-header__inner {
+  border-bottom: 1px solid transparent;
 }
 
-/* ── Scroll Reveal ── */
+.site-header.header-scrolled .site-header__inner {
+  background: rgba(247, 245, 240, 0.92);
+  border-bottom-color: rgba(15, 35, 71, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+/* カスタムロゴ（横型想定・表示は最大高さで制御） */
+.site-header .custom-logo-link,
+.site-footer .custom-logo-link {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.site-header .custom-logo-link img.custom-logo {
+  max-height: 2.75rem;
+  width: auto;
+  height: auto;
+}
+
+.site-footer .custom-logo-link img.custom-logo {
+  max-height: 2.25rem;
+  width: auto;
+  height: auto;
+}
+
+/* ── 区切り ── */
+.ym-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(15, 35, 71, 0.12), transparent);
+}
+
+/* ── スクロール表示 ── */
 .fade-up {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s var(--ease);
+  transform: translateY(24px);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
 }
 
 .fade-up.is-visible {
@@ -275,90 +281,68 @@ html { scroll-behavior: smooth; }
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+.delay-1 { transition-delay: 0.08s; }
+.delay-2 { transition-delay: 0.16s; }
+.delay-3 { transition-delay: 0.24s; }
+.delay-4 { transition-delay: 0.32s; }
 
-/* ── Divider ── */
-.divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gray-300), transparent);
+/* ── ヒーロー入場 ── */
+@keyframes ym-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
+.hero-enter-1 { animation: ym-rise 0.8s var(--ease) 0.05s both; }
+.hero-enter-2 { animation: ym-rise 0.8s var(--ease) 0.18s both; }
+.hero-enter-3 { animation: ym-rise 0.8s var(--ease) 0.3s both; }
+.hero-enter-4 { animation: ym-rise 0.8s var(--ease) 0.42s both; }
 
 /* ── FAQ ── */
 details summary::-webkit-details-marker { display: none; }
 details summary { list-style: none; }
 
-.yd-faq-shell {
-  border-radius: 1.5rem;
-  border: 1px solid var(--gray-200);
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: var(--shadow-sm);
-  padding: 0.5rem;
+.ym-faq {
+  border: 1px solid rgba(15, 35, 71, 0.1);
+  background: #fff;
 }
 
-.yd-faq-shell details {
-  border-radius: 1rem;
-  margin-bottom: 0.35rem;
-  background: rgba(250, 246, 241, 0.5);
-  border: 1px solid transparent;
-  transition: border-color 0.2s, background 0.2s;
+.ym-faq details {
+  border-bottom: 1px solid rgba(15, 35, 71, 0.08);
 }
 
-.yd-faq-shell details[open] {
-  background: var(--white);
-  border-color: rgba(30, 58, 95, 0.15);
+.ym-faq details:last-child {
+  border-bottom: none;
 }
 
-.yd-faq-shell details summary {
-  padding: 1rem 1.25rem;
-  border-radius: 1rem;
+.ym-faq summary {
+  padding: 1.125rem 1.25rem;
+  transition: background 0.15s;
 }
 
-.yd-faq-shell details summary:hover {
-  background: rgba(253, 250, 247, 0.9);
+.ym-faq summary:hover {
+  background: var(--paper);
 }
 
-.yd-faq-shell details:last-child {
-  margin-bottom: 0;
+.ym-faq details[open] summary {
+  background: rgba(199, 91, 58, 0.04);
 }
 
-/* ── Footer ── */
-.site-footer {
-  position: relative;
-  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
-  border-radius: 2rem 2rem 0 0;
-  margin-top: 4rem;
-}
-
-@media (min-width: 768px) {
-  .site-footer { border-radius: 2.5rem 2.5rem 0 0; margin-top: 5rem; }
-}
-
-.site-footer::before {
-  content: '';
-  position: absolute; left: 0; right: 0; top: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 145, 94, 0.25), transparent);
-}
-
-/* ── Pricing comparison ── */
+/* ── 料金表 ── */
 .pricing-compare td,
 .pricing-compare th {
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   text-align: center;
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid rgba(15, 35, 71, 0.08);
 }
 
 .pricing-compare th {
-  font-weight: 600;
-  color: var(--gray-900);
-  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.8125rem;
 }
 
 .pricing-compare td {
   font-size: 0.875rem;
-  color: var(--gray-700);
 }
 
 .pricing-compare tr:last-child td,
@@ -366,19 +350,56 @@ details summary { list-style: none; }
   border-bottom: none;
 }
 
-/* ── Hero animation ── */
-@keyframes hero-fade-in {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ── フロー縦ライン ── */
+.ym-flow-grid {
+  display: grid;
+  gap: 0;
 }
 
-.hero-enter-1 { animation: hero-fade-in 0.7s var(--ease) 0.1s both; }
-.hero-enter-2 { animation: hero-fade-in 0.7s var(--ease) 0.25s both; }
-.hero-enter-3 { animation: hero-fade-in 0.7s var(--ease) 0.4s both; }
-.hero-enter-4 { animation: hero-fade-in 0.7s var(--ease) 0.55s both; }
+@media (min-width: 640px) {
+  .ym-flow-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
 
-/* ── Reduced Motion ── */
+.ym-flow-step {
+  position: relative;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .ym-flow-connector {
+    display: none;
+  }
+}
+
+/* ── CTA 帯 ── */
+.ym-cta {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, var(--navy-deep) 0%, #040a14 55%, var(--navy-deep) 100%);
+}
+
+.ym-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 80% 20%, rgba(199, 91, 58, 0.15) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* ── フッター ── */
+.site-footer {
+  background: var(--navy-deep);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
   .fade-up { opacity: 1; transform: none; }
 }

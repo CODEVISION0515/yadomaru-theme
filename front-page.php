@@ -2,161 +2,177 @@
 
 <div class="min-h-screen">
 
-    <!-- ══ Hero ══ -->
-    <section class="yd-hero relative overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24">
-        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-            <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-navy/8 rounded-full blur-[160px]"></div>
-            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-amber/10 rounded-full blur-[120px]"></div>
-        </div>
-        <div class="relative max-w-6xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+    <!-- Hero -->
+    <section class="ym-hero relative overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28 lg:pt-24 lg:pb-32">
+        <div class="ym-hero__inner max-w-7xl mx-auto px-5 md:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-x-12 xl:gap-x-16 lg:items-end">
                 <div class="lg:col-span-7 text-center lg:text-left">
-                    <div class="hero-enter-1 inline-flex items-center gap-2 bg-white/90 border border-navy/15 text-stone-600 text-xs font-semibold px-4 py-2 rounded-full mb-8 shadow-[0_4px_20px_rgba(30,58,95,0.08)]">
-                        <span class="w-1.5 h-1.5 rounded-full bg-amber animate-pulse"></span>
-                        沖縄の宿泊施設運営代行
-                    </div>
-
-                    <h1 class="hero-enter-2 text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[3.75rem] font-black text-stone-800 leading-[1.15] tracking-tight mb-8">
-                        <span class="block text-balance">宿の運営、</span>
-                        <span class="block text-balance mt-1">まるっと<span class="text-navy">おまかせ。</span></span>
-                    </h1>
-
-                    <p class="hero-enter-3 text-base md:text-lg text-stone-600 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                        分析はAI、おもてなしは人。<br class="hidden sm:block">
-                        オーナーの手残りを最大化する、宿泊施設の運営代行。
+                    <p class="hero-enter-1 ym-kicker mx-auto lg:mx-0 flex items-center gap-2 flex-wrap justify-center lg:justify-start">
+                        <i class="ri-map-pin-line text-amber text-lg" aria-hidden="true"></i>
+                        沖縄 · 宿泊施設の運営代行
                     </p>
 
-                    <div class="hero-enter-4 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                        <a href="#contact" class="btn-accent !py-4 !px-8 !text-base">
+                    <h1 class="hero-enter-2 font-display text-[2.125rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] text-navy leading-[1.35] mb-8">
+                        宿の運営、<br class="hidden sm:block">
+                        <span class="text-amber">まるっとおまかせ。</span>
+                    </h1>
+
+                    <p class="hero-enter-3 text-base md:text-lg text-stone-600 mb-12 max-w-xl mx-auto lg:mx-0 leading-loose">
+                        分析はAI、おもてなしは人。<br class="hidden sm:block">
+                        オーナーの手残りを最大化する、宿泊施設の運営代行です。
+                    </p>
+
+                    <div class="hero-enter-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="btn-accent !py-4 !px-10">
                             まずは無料で相談する
                             <i class="ri-arrow-right-up-line text-lg"></i>
                         </a>
-                        <a href="#services" class="btn-ghost !py-4 !px-8">
+                        <a href="#services" class="btn-ghost !py-4 !px-10">
+                            <i class="ri-layout-grid-line text-lg" aria-hidden="true"></i>
                             サービスを見る
                         </a>
                     </div>
+
+                    <dl class="hero-enter-4 md:hidden mt-12 flex justify-center gap-10 border-t border-navy/10 pt-8">
+                        <div class="text-center">
+                            <dt class="text-[10px] tracking-[0.2em] text-navy-muted uppercase flex items-center justify-center gap-1">
+                                <i class="ri-building-2-line" aria-hidden="true"></i>
+                                管理施設
+                            </dt>
+                            <dd class="font-heading text-3xl text-navy tabular-nums mt-1">4</dd>
+                        </div>
+                        <div class="text-center">
+                            <dt class="text-[10px] tracking-[0.2em] text-navy-muted uppercase flex items-center justify-center gap-1">
+                                <i class="ri-links-line" aria-hidden="true"></i>
+                                対応OTA
+                            </dt>
+                            <dd class="font-heading text-3xl text-navy tabular-nums mt-1">5+</dd>
+                        </div>
+                    </dl>
                 </div>
 
-                <div class="lg:col-span-5 relative hidden lg:block" aria-hidden="true">
-                    <div class="relative max-w-sm mx-auto aspect-[4/5]">
-                        <div class="absolute -inset-1 rounded-[2rem] bg-gradient-to-br from-navy/15 via-stone-200/40 to-amber/20 opacity-90 rotate-[-2deg]"></div>
-                        <div class="absolute inset-0 rounded-[1.75rem] bg-white/95 border border-stone-200/90 shadow-[0_20px_50px_rgba(30,58,95,0.1)] flex flex-col justify-end p-8 rotate-[1.5deg]">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-navy/10 flex items-center justify-center">
-                                    <i class="ri-bar-chart-box-line text-navy text-lg"></i>
-                                </div>
-                                <div class="w-10 h-10 rounded-xl bg-amber/10 flex items-center justify-center">
-                                    <i class="ri-heart-line text-amber text-lg"></i>
-                                </div>
-                            </div>
-                            <p class="text-[10px] font-bold text-navy uppercase tracking-[0.2em] mb-2">YADOMARU</p>
-                            <p class="text-stone-600 text-sm leading-relaxed mb-6">OTA管理、価格最適化、ゲスト対応。<br>データと人の力で、宿を育てます。</p>
-                            <div class="flex items-center gap-4">
-                                <div>
-                                    <p class="text-2xl font-black text-stone-800">4</p>
-                                    <p class="text-[10px] text-stone-500">管理施設</p>
-                                </div>
-                                <div class="w-px h-8 bg-stone-200"></div>
-                                <div>
-                                    <p class="text-2xl font-black text-stone-800">5+</p>
-                                    <p class="text-[10px] text-stone-500">対応OTA</p>
-                                </div>
-                            </div>
+                <aside class="lg:col-span-5 mt-16 lg:mt-0 hidden md:block" aria-hidden="true">
+                    <div class="max-w-md mx-auto lg:ml-auto lg:mr-0 border-l-4 border-navy/15 pl-8 lg:pl-10 space-y-10 py-2">
+                        <div>
+                            <p class="font-heading text-4xl lg:text-5xl text-navy tabular-nums">4</p>
+                            <p class="text-xs tracking-[0.2em] text-navy-muted uppercase mt-1 flex items-center gap-1.5">
+                                <i class="ri-building-2-line" aria-hidden="true"></i>
+                                管理施設
+                            </p>
                         </div>
+                        <div>
+                            <p class="font-heading text-4xl lg:text-5xl text-navy tabular-nums">5+</p>
+                            <p class="text-xs tracking-[0.2em] text-navy-muted uppercase mt-1 flex items-center gap-1.5">
+                                <i class="ri-links-line" aria-hidden="true"></i>
+                                対応OTA
+                            </p>
+                        </div>
+                        <p class="text-sm text-stone-600 leading-relaxed border-t border-navy/10 pt-8 flex gap-3">
+                            <i class="ri-bar-chart-box-line text-navy text-lg shrink-0 mt-0.5" aria-hidden="true"></i>
+                            <span>OTA管理、価格最適化、ゲスト対応。<br>データと人の力で、宿を育てます。</span>
+                        </p>
                     </div>
-                </div>
+                </aside>
             </div>
         </div>
     </section>
 
-    <svg class="yd-wave text-[#f5efe8]" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 28c180 28 360 0 540-14s360-28 540 0 270 42 360 28v42H0z"/></svg>
+    <!-- Problem -->
+    <section class="py-20 md:py-28 bg-[#edeae3] border-y border-navy/5">
+        <div class="max-w-5xl mx-auto px-5 md:px-8">
+            <header class="mb-14 md:mb-16">
+                <div class="flex items-center gap-3 mb-4 fade-up">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center border border-navy/15 bg-white text-navy" aria-hidden="true">
+                        <i class="ri-error-warning-line text-xl"></i>
+                    </span>
+                    <p class="ym-kicker !mb-0 !border-l-0 !pl-0">Problem</p>
+                </div>
+                <h2 class="font-display text-2xl md:text-4xl text-navy leading-snug fade-up">宿のオーナーさん、<br class="md:hidden">こんな悩みはありませんか？</h2>
+            </header>
 
-    <!-- ══ Problem ══ -->
-    <section class="yd-dots py-24 md:py-32">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="mb-24">
-                <div class="flex items-center gap-3 mb-10 fade-up">
-                    <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center">
-                        <i class="ri-error-warning-line text-red-400"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 stagger">
+                <?php
+                $problems = array(
+                    array( 'text' => 'OTAの手数料が高く、利益が残らない', 'icon' => 'ri-currency-line' ),
+                    array( 'text' => '管理会社の手数料も高い（売上の20〜30%）', 'icon' => 'ri-percent-line' ),
+                    array( 'text' => '清掃費もかさんで、手残りがほとんどない', 'icon' => 'ri-brush-line' ),
+                    array( 'text' => '自分で運営すると時間がとられすぎる', 'icon' => 'ri-time-line' ),
+                    array( 'text' => '価格設定が適正かわからない', 'icon' => 'ri-question-line' ),
+                    array( 'text' => 'ゲスト対応が大変（特に多言語）', 'icon' => 'ri-translate-2' ),
+                    array( 'text' => '稼働率が上がらない', 'icon' => 'ri-calendar-close-line' ),
+                );
+                foreach ( $problems as $p ) :
+                ?>
+                    <div class="ym-card p-5 flex items-start gap-4 fade-up">
+                        <span class="flex h-11 w-11 shrink-0 items-center justify-center bg-navy/5 text-navy">
+                            <i class="<?php echo esc_attr( $p['icon'] ); ?> text-lg"></i>
+                        </span>
+                        <p class="text-stone-600 leading-relaxed pt-1 text-sm md:text-base"><?php echo esc_html( $p['text'] ); ?></p>
                     </div>
-                    <span class="text-xs font-semibold text-stone-500 tracking-widest uppercase">Problem</span>
-                </div>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-stone-800 mb-12 tracking-tight fade-up">宿のオーナーさん、<br class="md:hidden">こんな悩みはありませんか？</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 stagger">
-                    <?php
-                    $problems = array(
-                        array( 'text' => 'OTAの手数料が高く、利益が残らない', 'icon' => 'ri-money-yen-circle-line' ),
-                        array( 'text' => '管理会社の手数料も高い（売上の20〜30%）', 'icon' => 'ri-percent-line' ),
-                        array( 'text' => '清掃費もかさんで、手残りがほとんどない', 'icon' => 'ri-brush-line' ),
-                        array( 'text' => '自分で運営すると時間がとられすぎる', 'icon' => 'ri-time-line' ),
-                        array( 'text' => '価格設定が適正かわからない', 'icon' => 'ri-question-line' ),
-                        array( 'text' => 'ゲスト対応が大変（特に多言語）', 'icon' => 'ri-translate-2' ),
-                        array( 'text' => '稼働率が上がらない', 'icon' => 'ri-calendar-close-line' ),
-                    );
-                    foreach ( $problems as $p ) :
-                    ?>
-                        <div class="bento p-5 flex items-start gap-4 fade-up">
-                            <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0">
-                                <i class="<?php echo esc_attr( $p['icon'] ); ?> text-red-400 text-lg"></i>
-                            </div>
-                            <p class="text-stone-600 leading-relaxed pt-1.5"><?php echo esc_html( $p['text'] ); ?></p>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-
-            <!-- Divider -->
-            <div class="divider mb-24"></div>
-
-            <!-- Solution -->
-            <div>
-                <div class="flex items-center gap-3 mb-10 fade-up">
-                    <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center">
-                        <i class="ri-check-double-line text-emerald-500"></i>
-                    </div>
-                    <span class="text-xs font-semibold text-stone-500 tracking-widest uppercase">Solution</span>
-                </div>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-stone-800 mb-6 tracking-tight fade-up">宿まるが、<br class="md:hidden">全部引き受けます。</h2>
-                <p class="text-stone-600 mb-12 fade-up max-w-2xl">AIで自動化できるところは自動化し、管理コストを徹底的に下げる。<br>だから、オーナーの手残りを最大化できます。</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 stagger">
-                    <?php
-                    $solutions = array(
-                        array( 'text' => 'AIによるデータ分析で、常に最適な価格設定', 'icon' => 'ri-robot-2-line' ),
-                        array( 'text' => 'OTA一括管理で、手間なく露出を最大化', 'icon' => 'ri-global-line' ),
-                        array( 'text' => '多言語ゲスト対応で、海外からの予約もスムーズ', 'icon' => 'ri-translate-2' ),
-                        array( 'text' => '清掃手配・品質管理まで、まるっとおまかせ', 'icon' => 'ri-sparkling-2-line' ),
-                        array( 'text' => '業界最安レベルの管理手数料', 'icon' => 'ri-shield-check-line' ),
-                        array( 'text' => 'オーナーは本業や自由な時間に集中できる', 'icon' => 'ri-sun-line' ),
-                    );
-                    foreach ( $solutions as $s ) :
-                    ?>
-                        <div class="bento p-5 flex items-start gap-4 fade-up" style="border-color: rgba(16,185,129,0.15);">
-                            <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
-                                <i class="<?php echo esc_attr( $s['icon'] ); ?> text-emerald-500 text-lg"></i>
-                            </div>
-                            <p class="text-stone-700 font-medium leading-relaxed pt-1.5"><?php echo esc_html( $s['text'] ); ?></p>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
 
-    <!-- ══ Services ══ -->
-    <section id="services" class="py-24 md:py-32 bg-white relative">
-        <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-navy/15 to-transparent pointer-events-none" aria-hidden="true"></div>
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="mb-14 md:mb-16 fade-up flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+    <!-- Solution -->
+    <section class="py-20 md:py-28 bg-[#f7f5f0]">
+        <div class="max-w-5xl mx-auto px-5 md:px-8">
+            <header class="mb-12 md:mb-14">
+                <div class="flex items-center gap-3 mb-4 fade-up">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center border border-amber/30 bg-amber/10 text-amber-deep" aria-hidden="true">
+                        <i class="ri-hand-heart-line text-xl"></i>
+                    </span>
+                    <p class="ym-kicker !mb-0 !border-l-0 !pl-0">Solution</p>
+                </div>
+                <h2 class="font-display text-2xl md:text-4xl text-navy leading-snug fade-up mb-6">宿まるが、<br class="md:hidden">全部引き受けます。</h2>
+                <p class="text-stone-600 fade-up max-w-2xl leading-loose text-sm md:text-base">
+                    AIで自動化できるところは自動化し、管理コストを徹底的に下げる。<br>
+                    だから、オーナーの手残りを最大化できます。
+                </p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 stagger">
+                <?php
+                $solutions = array(
+                    array( 'text' => 'AIによるデータ分析で、常に最適な価格設定', 'icon' => 'ri-robot-2-line' ),
+                    array( 'text' => 'OTA一括管理で、手間なく露出を最大化', 'icon' => 'ri-global-line' ),
+                    array( 'text' => '多言語ゲスト対応で、海外からの予約もスムーズ', 'icon' => 'ri-translate-2' ),
+                    array( 'text' => '清掃手配・品質管理まで、まるっとおまかせ', 'icon' => 'ri-sparkling-2-line' ),
+                    array( 'text' => '業界最安レベルの管理手数料', 'icon' => 'ri-shield-check-line' ),
+                    array( 'text' => 'オーナーは本業や自由な時間に集中できる', 'icon' => 'ri-sun-line' ),
+                );
+                foreach ( $solutions as $s ) :
+                ?>
+                        <div class="ym-card p-5 flex items-start gap-4 fade-up border-l-4 border-l-amber border-navy/10">
+                        <span class="flex h-11 w-11 shrink-0 items-center justify-center bg-amber/10 text-amber-deep">
+                            <i class="<?php echo esc_attr( $s['icon'] ); ?> text-lg"></i>
+                        </span>
+                        <p class="text-stone-700 font-medium leading-relaxed pt-1 text-sm md:text-base"><?php echo esc_html( $s['text'] ); ?></p>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-5 md:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14 md:mb-16 fade-up">
                 <div>
-                    <span class="text-xs font-semibold text-navy tracking-widest uppercase">Services</span>
-                    <h2 class="text-2xl md:text-4xl font-extrabold text-stone-800 mt-3 tracking-tight">サービス内容</h2>
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="flex h-11 w-11 shrink-0 items-center justify-center bg-navy text-white" aria-hidden="true">
+                            <i class="ri-service-line text-xl"></i>
+                        </span>
+                        <p class="ym-kicker !mb-0 !border-l-0 !pl-0">Services</p>
+                    </div>
+                    <h2 class="font-display text-2xl md:text-4xl text-navy mt-2">サービス内容</h2>
                 </div>
-                <p class="text-stone-600 text-sm max-w-md md:text-right">宿泊施設の運営に必要なすべてを、ワンストップで。</p>
+                <p class="text-stone-600 text-sm md:text-base max-w-md lg:text-right leading-relaxed">
+                    宿泊施設の運営に必要なすべてを、ワンストップで。
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-navy/10 stagger">
                 <?php
                 $services = array(
                     array(
@@ -192,11 +208,11 @@
                 );
                 foreach ( $services as $svc ) :
                 ?>
-                    <div class="bento p-6 md:p-7 flex flex-col fade-up">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-navy to-navy-deep flex items-center justify-center mb-5 shadow-md shadow-navy/20">
-                            <i class="<?php echo esc_attr( $svc['icon'] ); ?> text-lg text-white"></i>
-                        </div>
-                        <h3 class="font-bold text-stone-800 text-lg mb-3"><?php echo esc_html( $svc['name'] ); ?></h3>
+                    <div class="bg-[#f7f5f0] p-6 md:p-8 flex flex-col fade-up hover:bg-white transition-colors">
+                        <span class="inline-flex h-12 w-12 items-center justify-center bg-navy text-white mb-5">
+                            <i class="<?php echo esc_attr( $svc['icon'] ); ?> text-xl"></i>
+                        </span>
+                        <h3 class="font-heading text-navy text-lg mb-3"><?php echo esc_html( $svc['name'] ); ?></h3>
                         <p class="text-sm text-stone-600 leading-relaxed flex-grow"><?php echo esc_html( $svc['desc'] ); ?></p>
                     </div>
                 <?php endforeach; ?>
@@ -204,20 +220,22 @@
         </div>
     </section>
 
-    <!-- ══ Track Record ══ -->
-    <section id="track-record" class="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-[#eae5de] via-[#f2ece5] to-[#e6ecf0]">
-        <div class="absolute inset-0 pointer-events-none opacity-80" aria-hidden="true">
-            <div class="absolute top-0 right-1/4 w-[400px] h-[400px] bg-navy/6 rounded-full blur-[100px]"></div>
-            <div class="absolute bottom-0 left-1/4 w-[350px] h-[350px] bg-amber/8 rounded-full blur-[90px]"></div>
-        </div>
-        <div class="relative max-w-5xl mx-auto px-6">
-            <div class="mb-14 md:mb-16 fade-up max-w-2xl">
-                <span class="inline-block text-xs font-semibold text-navy tracking-widest uppercase px-3 py-1 rounded-full bg-white/60 border border-navy/10">Track Record</span>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-stone-800 mt-5 tracking-tight leading-snug">管理施設のご紹介</h2>
-                <p class="text-stone-600 mt-3">沖縄本島北部を中心に、4施設の運営を代行しています。</p>
-            </div>
+    <!-- Track Record -->
+    <section id="track-record" class="relative py-20 md:py-28 bg-navy text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-30 pointer-events-none" aria-hidden="true" style="background-image: radial-gradient(circle at 20% 50%, rgba(199,91,58,0.25) 0%, transparent 45%), radial-gradient(circle at 80% 80%, rgba(26,61,107,0.4) 0%, transparent 40%);"></div>
+        <div class="relative max-w-5xl mx-auto px-5 md:px-8">
+            <header class="mb-12 md:mb-14 max-w-2xl">
+                <div class="flex items-center gap-3 mb-4 fade-up">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center border border-white/25 text-amber-soft" aria-hidden="true">
+                        <i class="ri-award-line text-xl"></i>
+                    </span>
+                    <p class="text-amber-soft text-xs font-bold tracking-[0.25em] uppercase !mb-0">Track Record</p>
+                </div>
+                <h2 class="font-display text-2xl md:text-4xl text-white leading-snug fade-up">管理施設のご紹介</h2>
+                <p class="text-white/70 mt-4 text-sm md:text-base leading-relaxed fade-up">沖縄本島北部を中心に、4施設の運営を代行しています。</p>
+            </header>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 stagger">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 stagger">
                 <?php
                 $facilities = array(
                     array(
@@ -247,43 +265,63 @@
                 );
                 foreach ( $facilities as $f ) :
                 ?>
-                    <div class="rounded-2xl p-6 fade-up bg-white border border-stone-200/90 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <article class="border border-white/15 bg-white/5 backdrop-blur-sm p-6 fade-up hover:bg-white/10 transition-colors">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-navy/8 text-navy">
+                            <span class="inline-flex h-10 w-10 items-center justify-center text-amber-soft border border-white/20">
                                 <i class="<?php echo esc_attr( $f['icon'] ); ?> text-lg"></i>
                             </span>
-                            <span class="text-[10px] font-semibold text-stone-500 bg-stone-100 px-2 py-0.5 rounded-full"><?php echo esc_html( $f['type'] ); ?></span>
+                            <span class="text-[10px] font-bold tracking-widest text-white/50 uppercase"><?php echo esc_html( $f['type'] ); ?></span>
                         </div>
-                        <h3 class="text-stone-800 font-bold text-lg mb-1"><?php echo esc_html( $f['name'] ); ?></h3>
-                        <p class="text-stone-500 text-sm flex items-center gap-1">
-                            <i class="ri-map-pin-line text-xs"></i>
+                        <h3 class="font-heading text-white text-lg mb-2"><?php echo esc_html( $f['name'] ); ?></h3>
+                        <p class="text-white/60 text-sm flex items-center gap-2">
+                            <i class="ri-map-pin-line"></i>
                             <?php echo esc_html( $f['location'] ); ?>
                         </p>
-                    </div>
+                    </article>
                 <?php endforeach; ?>
             </div>
         </div>
     </section>
 
-    <!-- ══ Pricing ══ -->
-    <section id="pricing" class="py-24 md:py-32 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-14 md:mb-16 fade-up">
-                <span class="text-xs font-semibold text-navy tracking-widest uppercase">Pricing</span>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-stone-800 mt-3 tracking-tight">料金の考え方</h2>
-                <p class="text-stone-600 mt-4 max-w-xl mx-auto">AIによる自動化で管理コストを削減。だから、業界最安レベルの手数料を実現しています。</p>
-            </div>
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 md:py-28 bg-[#f7f5f0]">
+        <div class="max-w-3xl mx-auto px-5 md:px-8">
+            <header class="text-center mb-12 md:mb-14 fade-up">
+                <div class="flex flex-col items-center gap-4 mb-2">
+                    <span class="flex h-12 w-12 items-center justify-center border border-navy/15 text-navy bg-white" aria-hidden="true">
+                        <i class="ri-price-tag-3-line text-xl"></i>
+                    </span>
+                    <p class="text-[0.6875rem] font-bold tracking-[0.28em] text-navy-muted uppercase">Pricing</p>
+                    <span class="block w-12 h-0.5 bg-amber" aria-hidden="true"></span>
+                </div>
+                <h2 class="font-display text-2xl md:text-4xl text-navy">料金の考え方</h2>
+                <p class="text-stone-600 mt-5 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+                    AIによる自動化で管理コストを削減。だから、業界最安レベルの手数料を実現しています。
+                </p>
+            </header>
 
-            <!-- Comparison -->
-            <div class="bento p-6 md:p-8 mb-10 fade-up">
-                <h3 class="font-bold text-stone-800 text-lg mb-6 text-center">業界比較</h3>
-                <div class="overflow-x-auto">
+            <div class="ym-card overflow-hidden mb-10 fade-up">
+                <h3 class="font-heading text-navy text-center py-4 bg-navy/5 border-b border-navy/10 flex items-center justify-center gap-2">
+                    <i class="ri-scales-3-line text-navy" aria-hidden="true"></i>
+                    業界比較
+                </h3>
+                <div class="overflow-x-auto p-4 md:p-6">
                     <table class="w-full pricing-compare">
                         <thead>
-                            <tr class="border-b-2 border-stone-200">
-                                <th class="text-left !pl-0"></th>
-                                <th class="text-stone-500 font-medium">一般的な管理会社</th>
-                                <th class="text-navy font-bold">宿まる</th>
+                            <tr>
+                                <th class="text-left !pl-2"></th>
+                                <th class="text-stone-500 font-medium">
+                                    <span class="inline-flex items-center justify-center gap-1.5">
+                                        <i class="ri-building-2-line text-stone-400" aria-hidden="true"></i>
+                                        一般的な管理会社
+                                    </span>
+                                </th>
+                                <th class="text-amber-deep font-bold bg-amber/5">
+                                    <span class="inline-flex items-center justify-center gap-1.5">
+                                        <i class="ri-hotel-line" aria-hidden="true"></i>
+                                        宿まる
+                                    </span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -299,9 +337,9 @@
                             foreach ( $comparisons as $c ) :
                             ?>
                             <tr>
-                                <th class="text-left !pl-0 !font-medium"><?php echo esc_html( $c['item'] ); ?></th>
+                                <th class="text-left !pl-2 !font-medium text-stone-700"><?php echo esc_html( $c['item'] ); ?></th>
                                 <td class="text-stone-500"><?php echo esc_html( $c['general'] ); ?></td>
-                                <td class="text-navy font-semibold"><?php echo esc_html( $c['yadomaru'] ); ?></td>
+                                <td class="text-navy font-bold bg-amber/5"><?php echo esc_html( $c['yadomaru'] ); ?></td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -309,21 +347,26 @@
                 </div>
             </div>
 
-            <p class="text-center text-stone-500 text-sm fade-up">
+            <p class="text-center text-stone-500 text-sm fade-up leading-relaxed">
                 ※ 具体的な料金は施設の規模・条件により異なります。まずはお気軽にご相談ください。
             </p>
         </div>
     </section>
 
-    <!-- ══ Flow ══ -->
-    <section class="py-24 md:py-32 bg-[#faf6f1]/50">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-14 md:mb-16 fade-up">
-                <span class="text-xs font-semibold text-navy tracking-widest uppercase">Flow</span>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-stone-800 mt-3 tracking-tight">ご利用の流れ</h2>
-            </div>
+    <!-- Flow -->
+    <section class="py-20 md:py-28 bg-white border-y border-navy/5">
+        <div class="max-w-4xl mx-auto px-5 md:px-8">
+            <header class="text-center mb-14 fade-up">
+                <div class="flex flex-col items-center gap-3">
+                    <span class="flex h-12 w-12 items-center justify-center border border-navy/15 text-navy bg-[#f7f5f0]" aria-hidden="true">
+                        <i class="ri-route-line text-xl"></i>
+                    </span>
+                    <p class="ym-kicker mx-auto !border-l-0 !pl-0 text-center">Flow</p>
+                </div>
+                <h2 class="font-display text-2xl md:text-4xl text-navy mt-4">ご利用の流れ</h2>
+            </header>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 stagger">
+            <ol class="relative space-y-0 stagger md:pl-2">
                 <?php
                 $steps = array(
                     array(
@@ -353,30 +396,37 @@
                 );
                 foreach ( $steps as $step ) :
                 ?>
-                    <div class="bento p-6 fade-up">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-navy/8 text-navy text-xs font-bold"><?php echo esc_html( $step['step'] ); ?></span>
-                            <div class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center">
-                                <i class="<?php echo esc_attr( $step['icon'] ); ?> text-amber text-base"></i>
-                            </div>
+                    <li class="relative flex gap-5 md:gap-8 pb-10 md:pb-12 last:pb-0 fade-up">
+                        <div class="flex h-9 w-9 shrink-0 items-center justify-center bg-navy text-white text-xs font-bold">
+                            <?php echo esc_html( $step['step'] ); ?>
                         </div>
-                        <h3 class="text-stone-800 font-bold text-lg mb-2"><?php echo esc_html( $step['title'] ); ?></h3>
-                        <p class="text-stone-600 text-sm leading-relaxed"><?php echo esc_html( $step['desc'] ); ?></p>
-                    </div>
+                        <div class="flex-1 pt-0.5">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="<?php echo esc_attr( $step['icon'] ); ?> text-amber text-lg"></i>
+                                <h3 class="font-heading text-navy text-lg"><?php echo esc_html( $step['title'] ); ?></h3>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed"><?php echo esc_html( $step['desc'] ); ?></p>
+                        </div>
+                    </li>
                 <?php endforeach; ?>
-            </div>
+            </ol>
         </div>
     </section>
 
-    <!-- ══ FAQ ══ -->
-    <section id="faq" class="py-24 md:py-32 bg-[#faf6f1]">
-        <div class="max-w-2xl mx-auto px-6">
-            <div class="text-center mb-12 fade-up">
-                <span class="text-xs font-semibold text-navy tracking-widest uppercase">FAQ</span>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-stone-800 mt-3 tracking-tight">よくある質問</h2>
-            </div>
+    <!-- FAQ -->
+    <section id="faq" class="py-20 md:py-28 bg-[#edeae3]">
+        <div class="max-w-2xl mx-auto px-5 md:px-8">
+            <header class="text-center mb-10 fade-up">
+                <div class="flex flex-col items-center gap-3">
+                    <span class="flex h-12 w-12 items-center justify-center border border-navy/15 text-navy bg-white" aria-hidden="true">
+                        <i class="ri-question-answer-line text-xl"></i>
+                    </span>
+                    <p class="ym-kicker mx-auto !border-l-0 !pl-0 text-center">FAQ</p>
+                </div>
+                <h2 class="font-display text-2xl md:text-4xl text-navy mt-4">よくある質問</h2>
+            </header>
 
-            <div class="yd-faq-shell fade-up">
+            <div class="ym-faq fade-up">
                 <?php
                 $faqs = array(
                     array(
@@ -410,14 +460,17 @@
                 );
                 foreach ( $faqs as $faq ) :
                 ?>
-                    <details class="group fade-up">
-                        <summary class="flex items-center justify-between cursor-pointer list-none">
-                            <span class="font-medium text-stone-800 pr-6 text-[0.9375rem] text-left"><?php echo esc_html( $faq['q'] ); ?></span>
-                            <span class="text-navy/50 flex-shrink-0 group-open:rotate-45 transition-transform duration-200">
-                                <i class="ri-add-line text-lg"></i>
+                    <details class="group">
+                        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                            <span class="font-medium text-navy pr-4 text-[0.9375rem] text-left leading-snug flex items-start gap-3">
+                                <i class="ri-question-line text-navy/50 shrink-0 mt-0.5" aria-hidden="true"></i>
+                                <?php echo esc_html( $faq['q'] ); ?>
+                            </span>
+                            <span class="text-navy/40 shrink-0 group-open:rotate-45 transition-transform duration-200">
+                                <i class="ri-add-line text-xl"></i>
                             </span>
                         </summary>
-                        <div class="px-5 pb-4 pt-0 text-sm text-stone-600 leading-relaxed">
+                        <div class="px-5 pb-5 pt-0 pl-10 md:pl-11 text-sm text-stone-600 leading-relaxed">
                             <?php echo esc_html( $faq['a'] ); ?>
                         </div>
                     </details>
@@ -426,24 +479,24 @@
         </div>
     </section>
 
-    <!-- ══ CTA ══ -->
-    <section id="contact" class="yd-cta-band relative py-28 md:py-36 overflow-hidden">
-        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber/10 rounded-full blur-[120px]"></div>
-        </div>
-        <div class="relative max-w-2xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-black text-[#faf6f1] mb-6 fade-up tracking-tight leading-snug max-w-3xl mx-auto">
-                <span class="block text-balance">宿の運営、</span>
-                <span class="block text-balance mt-2 md:mt-3">まるっとおまかせしませんか？</span>
+    <!-- CTA -->
+    <section id="contact" class="ym-cta relative py-24 md:py-32">
+        <div class="relative z-10 max-w-2xl mx-auto px-5 md:px-8 text-center">
+            <div class="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-amber-soft mb-8 fade-up mx-auto" aria-hidden="true">
+                <i class="ri-mail-send-line text-2xl"></i>
+            </div>
+            <h2 class="font-display text-3xl md:text-5xl text-white mb-8 fade-up leading-snug">
+                宿の運営、<br>
+                <span class="text-amber-soft">まるっとおまかせしませんか？</span>
             </h2>
-            <p class="text-stone-400 mb-12 fade-up delay-1 text-base">
+            <p class="text-white/65 mb-12 fade-up delay-1 text-base leading-relaxed">
                 まずは無料相談から。施設の状況をヒアリングし、最適なプランをご提案します。
             </p>
-            <a href="https://codevision.co.jp/contact" class="btn-accent !py-4 !px-10 fade-up delay-2" target="_blank" rel="noopener noreferrer">
+            <a href="https://codevision.co.jp/contact" class="btn-accent !py-4 !px-12 fade-up delay-2" target="_blank" rel="noopener noreferrer">
                 無料で相談する
                 <i class="ri-arrow-right-up-line text-lg"></i>
             </a>
-            <p class="text-stone-500 text-xs mt-8 fade-up delay-3">初回相談無料 / オンラインOK / 最短翌営業日に返信</p>
+            <p class="text-white/45 text-xs mt-10 tracking-wider fade-up delay-3">初回相談無料 / オンラインOK / 最短翌営業日に返信</p>
         </div>
     </section>
 </div>

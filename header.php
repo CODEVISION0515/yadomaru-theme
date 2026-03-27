@@ -10,11 +10,12 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: { DEFAULT: '#1e3a5f', deep: '#152a45', light: '#2a4f7a', muted: '#3d6490' },
-                        amber: { DEFAULT: '#d4915e', soft: '#e8b48a', deep: '#b87543' },
+                        navy: { DEFAULT: '#0f2347', deep: '#081428', light: '#1a3d6b', muted: '#5a6f8f' },
+                        amber: { DEFAULT: '#c75b3a', soft: '#e8b5a3', deep: '#9e4428' },
                     },
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', '"Noto Sans JP"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        sans: ['"Zen Kaku Gothic New"', '"Noto Sans JP"', 'sans-serif'],
+                        display: ['"Shippori Mincho"', '"Noto Serif JP"', 'serif'],
                     },
                 },
             },
@@ -26,50 +27,51 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'min-h-screen bg-[#fdfaf7] text-stone-700 antialiased' ); ?>>
+<body <?php body_class( 'min-h-screen bg-[#f7f5f0] text-stone-600 antialiased' ); ?>>
     <?php wp_body_open(); ?>
+    <?php $nav_items = yadomaru_primary_nav_items(); ?>
 
-    <header class="site-header w-full sticky top-0 z-50 px-4 pt-3 pb-2 md:px-6 md:pt-4 md:pb-3">
-        <div class="max-w-6xl mx-auto">
-            <div class="site-header__bar px-4 py-3 md:px-5 md:py-3">
-            <div class="flex items-center justify-between">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="transition-opacity hover:opacity-70 flex items-center gap-2">
-                    <i class="ri-hotel-line text-xl text-navy"></i>
-                    <span class="font-heading text-base font-bold tracking-tight text-stone-800">宿まる</span>
-                </a>
+    <header class="site-header sticky top-0 z-50">
+        <div class="site-header__inner">
+            <div class="max-w-7xl mx-auto px-5 md:px-8 py-4 md:py-5 flex items-center justify-between gap-6">
+                <div class="site-brand shrink-0 [&_a]:inline-flex [&_a]:items-center [&_a]:leading-none">
+                    <?php yadomaru_the_site_logo( 'header' ); ?>
+                </div>
 
-                <nav class="hidden md:flex items-center gap-1">
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="主要ナビ">
                     <?php
-                    $nav_items = yadomaru_primary_nav_items();
-                    $nav_last  = count( $nav_items ) - 1;
+                    $nav_last = count( $nav_items ) - 1;
                     foreach ( $nav_items as $i => $item ) :
                         $is_cta = ( $i === $nav_last );
                         ?>
                     <a href="<?php echo esc_url( $item['href'] ); ?>"
-                        class="<?php echo $is_cta ? 'bg-navy text-white text-[13px] font-semibold px-5 py-2 rounded-full ml-2 shadow-sm hover:bg-navy-deep transition-colors' : 'text-stone-600 hover:text-navy-deep text-[13px] font-medium px-3 py-2 rounded-full transition-colors hover:bg-stone-100'; ?>"><?php echo esc_html( $item['label'] ); ?></a>
+                        class="<?php echo $is_cta
+                            ? 'ml-2 xl:ml-4 px-5 py-2.5 text-sm font-bold bg-amber text-white tracking-wider hover:bg-amber-deep transition-colors'
+                            : 'px-3 py-2 text-sm text-navy/80 hover:text-navy border-b-2 border-transparent hover:border-amber transition-colors'; ?>"><?php echo esc_html( $item['label'] ); ?></a>
                         <?php
                     endforeach;
                     ?>
                 </nav>
 
-                <button id="mobile-menu-btn" class="md:hidden w-9 h-9 flex items-center justify-center rounded-full hover:bg-navy/10 transition-colors" aria-label="メニュー" aria-expanded="false">
-                    <i class="ri-menu-line text-lg text-stone-600"></i>
+                <button id="mobile-menu-btn" type="button" class="lg:hidden flex h-11 w-11 items-center justify-center border border-navy/20 text-navy hover:bg-navy/5" aria-label="メニュー" aria-expanded="false">
+                    <i class="ri-menu-line text-xl"></i>
                 </button>
             </div>
 
-            <nav id="mobile-menu" class="hidden md:hidden mt-3 pt-3 border-t border-stone-200/70">
-                <div class="flex flex-col gap-1">
+            <nav id="mobile-menu" class="hidden lg:hidden border-t border-navy/10 bg-[#f7f5f0]/98 px-5 py-4" aria-label="モバイルナビ">
+                <div class="flex flex-col gap-1 max-w-7xl mx-auto">
                     <?php
                     foreach ( $nav_items as $i => $item ) :
-                        $is_cta = ( $i === $nav_last );
+                        $is_cta = ( $i === count( $nav_items ) - 1 );
                         ?>
                     <a href="<?php echo esc_url( $item['href'] ); ?>"
-                        class="<?php echo $is_cta ? 'bg-navy text-white text-sm py-2.5 px-3 rounded-full text-center mt-2 shadow-sm hover:bg-navy-deep' : 'text-stone-600 hover:text-navy-deep text-sm py-2.5 px-3 rounded-full transition-colors hover:bg-stone-100'; ?>"><?php echo esc_html( $item['label'] ); ?></a>
+                        class="<?php echo $is_cta
+                            ? 'mt-2 text-center py-3 text-sm font-bold bg-navy text-white tracking-wider'
+                            : 'py-3 text-sm text-navy border-b border-navy/5'; ?>"><?php echo esc_html( $item['label'] ); ?></a>
                         <?php
                     endforeach;
                     ?>
                 </div>
             </nav>
-            </div>
         </div>
     </header>
