@@ -485,8 +485,7 @@
             <div class="inline-flex h-14 w-14 items-center justify-center border border-white/20 text-amber-soft mb-8 fade-up mx-auto" aria-hidden="true">
                 <i class="ri-mail-send-line text-2xl"></i>
             </div>
-            <h2 class="font-display text-3xl md:text-5xl text-white mb-8 fade-up leading-snug">
-                宿の運営、<br>
+            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-8 fade-up leading-snug whitespace-nowrap">
                 <span class="text-amber-soft">まるっとおまかせしませんか？</span>
             </h2>
             <p class="text-white/65 mb-12 fade-up delay-1 text-base leading-relaxed">
