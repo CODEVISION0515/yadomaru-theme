@@ -50,11 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', function() {
             var open = menu.classList.toggle('hidden');
             btn.setAttribute('aria-expanded', !open);
-            var icon = btn.querySelector('i');
+            var icon = btn.querySelector('.menu-icon');
             if (icon) {
-                icon.className = menu.classList.contains('hidden')
-                    ? 'ri-menu-line text-xl'
-                    : 'ri-close-line text-xl';
+                icon.textContent = menu.classList.contains('hidden') ? 'MENU' : '✕';
             }
         });
     }

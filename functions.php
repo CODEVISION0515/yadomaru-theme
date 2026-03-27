@@ -76,7 +76,6 @@ function yadomaru_the_site_logo( $context = 'header' ) {
  * スクリプト・スタイル読み込み
  */
 function yadomaru_scripts() {
-	wp_enqueue_style( 'remixicon', 'https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css', array(), '4.5.0' );
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap', array(), null );
 	wp_enqueue_style( 'yadomaru-style', get_stylesheet_uri(), array(), '2.0.2' );
 }

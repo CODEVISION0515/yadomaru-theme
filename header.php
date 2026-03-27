@@ -53,8 +53,8 @@
                     ?>
                 </nav>
 
-                <button id="mobile-menu-btn" type="button" class="lg:hidden flex h-11 w-11 items-center justify-center border border-navy/20 text-navy hover:bg-navy/5" aria-label="メニュー" aria-expanded="false">
-                    <i class="ri-menu-line text-xl"></i>
+                <button id="mobile-menu-btn" type="button" class="lg:hidden flex h-11 w-11 items-center justify-center border border-navy/20 text-navy hover:bg-navy/5 text-sm font-bold tracking-wider" aria-label="メニュー" aria-expanded="false">
+                    <span class="menu-icon">MENU</span>
                 </button>
             </div>
 
