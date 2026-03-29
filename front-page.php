@@ -5,8 +5,8 @@
     <!-- Hero -->
     <section class="ym-hero relative overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28 lg:pt-24 lg:pb-32">
         <div class="ym-hero__inner max-w-7xl mx-auto px-5 md:px-8">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-x-12 xl:gap-x-16 lg:items-end">
-                <div class="lg:col-span-7 text-center lg:text-left">
+            <div class="max-w-2xl mx-auto lg:mx-0">
+                <div class="text-center lg:text-left">
                     <p class="hero-enter-1 ym-kicker mx-auto lg:mx-0">
                         沖縄 · 宿泊施設の運営代行
                     </p>
@@ -30,33 +30,7 @@
                         </a>
                     </div>
 
-                    <dl class="hero-enter-4 md:hidden mt-12 flex justify-center gap-10 border-t border-navy/10 pt-8">
-                        <div class="text-center">
-                            <dt class="text-[10px] tracking-[0.2em] text-navy-muted uppercase">管理施設</dt>
-                            <dd class="font-heading text-3xl text-navy tabular-nums mt-1">4</dd>
-                        </div>
-                        <div class="text-center">
-                            <dt class="text-[10px] tracking-[0.2em] text-navy-muted uppercase">対応OTA</dt>
-                            <dd class="font-heading text-3xl text-navy tabular-nums mt-1">5+</dd>
-                        </div>
-                    </dl>
                 </div>
-
-                <aside class="lg:col-span-5 mt-16 lg:mt-0 hidden md:block" aria-hidden="true">
-                    <div class="max-w-md mx-auto lg:ml-auto lg:mr-0 border-l-4 border-navy/15 pl-8 lg:pl-10 space-y-10 py-2">
-                        <div>
-                            <p class="font-heading text-4xl lg:text-5xl text-navy tabular-nums">4</p>
-                            <p class="text-xs tracking-[0.2em] text-navy-muted uppercase mt-1">管理施設</p>
-                        </div>
-                        <div>
-                            <p class="font-heading text-4xl lg:text-5xl text-navy tabular-nums">5+</p>
-                            <p class="text-xs tracking-[0.2em] text-navy-muted uppercase mt-1">対応OTA</p>
-                        </div>
-                        <p class="text-sm text-stone-600 leading-relaxed border-t border-navy/10 pt-8">
-                            OTA管理、価格最適化、ゲスト対応。<br>データと人の力で、宿を育てます。
-                        </p>
-                    </div>
-                </aside>
             </div>
         </div>
     </section>
