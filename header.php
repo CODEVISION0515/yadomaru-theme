@@ -4,6 +4,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="5JsOYK8pdbDGXqEDtBLEaUFizThMEfSm9r_Eau-4QTY" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
