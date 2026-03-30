@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="min-h-screen">
+<div id="main-content" class="min-h-screen">
 
     <!-- Hero -->
     <section class="ym-hero relative overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28 lg:pt-24 lg:pb-32">

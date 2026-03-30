@@ -30,6 +30,7 @@
 
 <body <?php body_class( 'min-h-screen bg-[#f7f5f0] text-stone-600 antialiased' ); ?>>
     <?php wp_body_open(); ?>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:z-50">本文へスキップ</a>
     <?php $nav_items = yadomaru_primary_nav_items(); ?>
 
     <header class="site-header sticky top-0 z-50">

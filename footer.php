@@ -36,7 +36,7 @@
         </div>
 
         <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/35 tracking-wider">
-            <p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> 株式会社CODEVISION</p>
+            <p>&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> 株式会社CODEVISION</p>
             <p>Okinawa, Japan</p>
         </div>
     </div>

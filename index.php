@@ -16,7 +16,7 @@ get_header();
             <?php while ( have_posts() ) : the_post(); ?>
                 <article class="mb-10 ym-card p-6 md:p-8">
                     <h2 class="font-heading text-xl text-navy mb-3">
-                        <a href="<?php the_permalink(); ?>" class="hover:text-amber transition-colors"><?php the_title(); ?></a>
+                        <a href="<?php the_permalink(); ?>" class="hover:text-amber transition-colors"><?php echo esc_html( get_the_title() ); ?></a>
                     </h2>
                     <div class="text-sm text-stone-500 mb-4"><?php echo get_the_date(); ?></div>
                     <div class="text-stone-600 leading-relaxed"><?php the_excerpt(); ?></div>
